@@ -1,0 +1,17 @@
+<div class="nav-container">
+  <nav>
+    <input type="checkbox" [(ngModel)]="checked" id="nav-toggle">
+    <label for="nav-toggle" class="burger-menu pointer">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAVElEQVRoge3WwQ2AUAhEQb6xcK0ci5AEQmYq2L29CAAanMx8ukdUOJmZ3SMqXN0DqjgyzR0Rb/cIAKCIjJ9mTTQ6Mo2MB4BNZPw0a6LRkWlkPAB/fId1GBOc3m2dAAAAAElFTkSuQmCC">
+    </label>
+    <div class="left-menu">
+      <a (click)="homeNavigate(); hide()">Home</a>
+      <a (click)="searchNavigate(); hide()">Search</a>
+      <a class="pointer" (click)="backClick()">Back</a>
+    </div>
+    <a href="#" class="logo"><img src="/assets/img/Spotify_Icon.png" width="20" height="20" alt=""> Music App</a>
+    <div class="right-menu">
+    </div>
+  </nav>
+</div>

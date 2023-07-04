@@ -1,0 +1,113 @@
+.flexContainer {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ouro {
+    background: none repeat scroll 0 0 #1DB954;
+    border-radius: 50%;  
+    box-shadow: 0 0 10px rgba(0,0,0,.1) inset, 0 0 25px rgba(0,0,255,0.075);
+    height: 46px;
+    margin: 1em;
+    position: relative;
+    width: 46px;
+  }
+  
+  .ouro:after {
+    content: "";
+    background: none repeat scroll 0 0 #000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: block;
+    height: 28px; width: 28px;
+    position: absolute;
+    top: 9px; left: 9px;
+  }
+  
+  .ouro > span {
+    position: absolute;
+    height: 100%; width: 50%;
+    overflow: hidden;
+  }
+  
+  .left {
+    left: 0
+  }
+  
+  .right {
+    left:50%
+  }
+  
+  .anim {
+    animation: ui-spinner-rotate-left 3s infinite;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 999px;
+    height: 100%; width: 100%;
+    left: 100%; top: 0;
+    opacity: 0.8;
+    position: absolute;
+    transform-origin: 0 50% 0;
+    -webkit-animation: ui-spinner-rotate-left 3s infinite;
+    -webkit-transform-origin: 0 50% 0;
+  }
+  
+  .left .anim {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  .right .anim {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    left: -100%;
+    transform-origin: 100% 50% 0;
+    -webkit-transform-origin: 100% 50% 0;
+  }
+  
+  /* double variation */
+  .double .ouro:after {
+    background: transparent;
+    border: 10px solid #ddd;
+    box-shadow: none;
+    height: 13px;
+    left: 7px;
+    top: 7px;
+    width: 13px;
+  }
+  
+  @keyframes ui-spinner-rotate-right{
+    0%{transform:rotate(0deg)}
+    25%{transform:rotate(180deg)}
+    50%{transform:rotate(180deg)}
+    75%{transform:rotate(360deg)}
+    100%{transform:rotate(360deg)}
+  }
+  @keyframes ui-spinner-rotate-left{
+    0%{transform:rotate(0deg)}
+    25%{transform:rotate(0deg)}
+    50%{transform:rotate(180deg)}
+    75%{transform:rotate(180deg)}
+    100%{transform:rotate(360deg)}
+  }
+  
+  @-webkit-keyframes ui-spinner-rotate-right{
+    0%{-webkit-transform:rotate(0deg)}
+    25%{-webkit-transform:rotate(180deg)}
+    50%{-webkit-transform:rotate(180deg)}
+    75%{-webkit-transform:rotate(360deg)}
+    100%{-webkit-transform:rotate(360deg)}
+  }
+  @-webkit-keyframes ui-spinner-rotate-left{
+    0%{-webkit-transform:rotate(0deg)}
+    25%{-webkit-transform:rotate(0deg)}
+    50%{-webkit-transform:rotate(180deg)}
+    75%{-webkit-transform:rotate(180deg)}
+    100%{-webkit-transform:rotate(360deg)}
+  }
+  
+  .loadingText {
+    align-items: center;
+    display: flex; 
+  }
+  

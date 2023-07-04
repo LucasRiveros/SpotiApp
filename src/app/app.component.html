@@ -1,0 +1,5 @@
+<app-loading message='Checking authentication, please wait...' *ngIf="loading; else showApp"></app-loading>
+<ng-template #showApp>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+</ng-template>

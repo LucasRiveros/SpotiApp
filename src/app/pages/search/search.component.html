@@ -1,0 +1,10 @@
+<div class="flex-container-search">
+  <input #term (keyup)="searchArtist($event, term.value)" type="text" placeholder="Search for an artist"
+    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search for an artist'">
+</div>
+<app-loading *ngIf="loading"></app-loading>
+<div class="flex-container background" *ngIf="loaded && !loading">
+  <app-card (click)="goArtist(artist.id)" *ngFor="let artist of artists" [src]="artist?.images | noImg"
+    [title]="artist.name" [subtitle]="">
+  </app-card>
+</div>

@@ -1,0 +1,15 @@
+<div class="flex-container-player">
+  <div class="album-player">
+    <img [src]="imgUrl">
+    <span class="artist-name"> {{ tracks ? tracks[0]?.artists[0]?.name : '' }} </span>
+  </div>
+  <div class="align-start">
+    <div class="player" *ngFor="let track of tracks; let i = index">
+      <div>{{ i + 1 }} - {{ track.name }}</div>
+      <audio *ngIf="track.preview_url; else previewUnavailable" [src]="track.preview_url" controls></audio>
+      <ng-template #previewUnavailable>
+        <span>Preview unavailable</span>
+      </ng-template>
+    </div>
+  </div>
+</div>

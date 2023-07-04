@@ -1,0 +1,8 @@
+<app-loading *ngIf="loading; else showHome"></app-loading>
+<ng-template #showHome>
+  <div class="flex-container background">
+    <app-card (click)="goAlbum(release.id, release.images[0].url)" *ngFor="let release of releases"
+      [src]="release.images[0].url" [title]="release.artists[0].name" [subtitle]="release.name">
+    </app-card>
+  </div>
+</ng-template>

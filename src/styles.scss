@@ -1,0 +1,130 @@
+html * {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #191414;
+    color: white;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-outline-primary {
+    color: #1DB954;
+    border-color: #1DB954;
+}
+
+.flex-container, .flex-container-search, .flex-container-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.artist-name {
+    font-size: 24px;
+}
+
+.flex-container-search input {
+    width: 70%;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px;
+    height: 36px;
+}
+
+.player {
+    padding: 1rem 0;
+    & audio {
+        margin-top: 2px;
+    }
+}
+.album-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & img {
+        width: 30%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 600px){
+    .flex-container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex-card img {
+        max-height: 266px;
+    }
+}
+
+@media (min-width: 800px){
+    .flex-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .artist-name {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1000px){
+    .flex-container {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1300px;
+        margin: auto;
+    }
+}
+
+.flex-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+    &:hover {
+        box-shadow: 3px 3px 5px 6px #fff;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+}
+
+.flex-card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-self: normal;
+    padding: 5px;
+    background-color: #1DB954;
+    flex-direction: column;
+    height: 100px;
+}
